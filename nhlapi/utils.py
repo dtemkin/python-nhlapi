@@ -27,12 +27,3 @@ def get_num_games(season):
             n_games = max_n_games + 100
 
         return [str(i).zfill(4-len(str(i))) for i in range(1, n_games)]
-
-
-def get_seasons():
-    file_header = ["num", "season", "num_teams",
-                   "reg_season_games", "total_games"]
-
-    f = open(os.path.join(os.getcwd(), "seasons_info.csv"), mode='r')
-    readr = DictReader(f, fieldnames=file_header)
-    return [r["season"] for r in readr]

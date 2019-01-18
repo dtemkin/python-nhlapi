@@ -373,7 +373,7 @@ class Teams(BaseEndpoint):
     def __init__(self, ID=None, season=None, expand=None):
         super().__init__()
         self.base_url = urljoin(self.url_template, "teams")
-        self.data = None
+        
         if ID is None:
             pass
         elif type(ID) is list:

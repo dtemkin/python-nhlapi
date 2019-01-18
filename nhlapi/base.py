@@ -1,5 +1,6 @@
 from nhlapi import config
 
+
 class BaseEndpoint(object):
 
     def __init__(self):
